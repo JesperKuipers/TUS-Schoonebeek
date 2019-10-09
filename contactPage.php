@@ -88,8 +88,6 @@
                     if($request == "POST" && isset($submit)){
                         mail($to, $subject, $message, $headers);
                     }
-
-
                 ?>
         </div>
     </body>
