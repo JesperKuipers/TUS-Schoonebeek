@@ -69,47 +69,30 @@
                                 echo '<script type="text/javascript">alert("U vergeet wat in te vullen");</script>';
                             }
                             
-                            function mailTo($fName, $lName, $Mail, $Message){
-                                if(!empty($fName)){
-                                    if(!empty($lName)){
-                                        if(!empty($Mail)){
-                                            if(!empty($Tel)){
-                                                if(!empty($Message)){
-                                                    $to      = 'mailadres';
-                                                    $subject = 'the subject';
-                                                    $message = 'Beste Mr/Mevr,
-                                                                '. "\r\n \r\n".'
-                                                                Mijn naam is $fName $lName,
-                                                                '. "\r\n \r\n".'
-                                                                $Message
-                                                                '. "\r\n \r\n".'
-                                                                Mijn gegevens zijn:
-                                                                Mail: $Mail
-                                                                Tel: $Tel
-                                                                '. "\r\n \r\n".'
-                                                                Met vriendelijke groet,
-                                                                $fName $lName';
-
-                                                    mail($to, $subject, $message);
-                                                }else{
-                                                    waarSchuwing();
-                                                }
-                                            }else{
-                                                waarSchuwing();
-                                            }
-                                        }else{
-                                            waarSchuwing();
-                                        }
-                                    }else{
-                                        waarSchuwing();
-                                    }
-                                }else{
-                                    waarSchuwing();
-                                }
+                            if(!empty($fName) || !empty($lName) || !empty($Mail) || !empty($Tel) || !empty($Message)){
+                                $to      = 'mailadres';
+                                $subject = 'the subject';
+                                $message = 'Beste Mr/Mevr,
+                                            '. "\r\n \r\n".'
+                                            Mijn naam is $fName $lName,
+                                            '. "\r\n \r\n".'
+                                            $Message
+                                            '. "\r\n \r\n".'
+                                            Mijn gegevens zijn:
+                                            Mail: $Mail
+                                            Tel: $Tel
+                                            '. "\r\n \r\n".'
+                                            Met vriendelijke groet,
+                                            $fName $lName';
+                                $headers = 'From: webmaster@example.com' . "\r\n" .
+                                            'Reply-To: webmaster@example.com' . "\r\n" .
+                                            'X-Mailer: PHP/' . phpversion();
+                            }else{
+                                waarSchuwing();
                             }
                             
                             if($request == "POST" && isset($submit)){
-                                mailTo($fName, $lName, $Mail, $Message);
+                                mail($to, $subject, $message, $headers);
                             }
                             
 
