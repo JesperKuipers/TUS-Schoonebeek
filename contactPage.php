@@ -70,18 +70,21 @@
 
         if (!empty($fName) && !empty($lName) && !empty($Mail) && !empty($Tel) && !empty($Message)) {
             $to = "test@test.nl";
-            $subject = "the subject";
-            $message = "Beste Mr/Mevr," . "\r\n \r\n" . "Mijn naam is " . $fName . $lName . ", " . "\r\n \r\n" . $Message . "\r\n \r\n" . "
-        Mijn gegevens zijn: Mail: $Mail Tel: $Tel " . "\r\n \r\n" . " Met vriendelijke groet, $fName $lName";
-            $headers = "From: webmaster@example.com" . "\r\n" .
-                "Reply-To: webmaster@example.com" . "\r\n" .
+            $subject = "Contact";
+            $message = "Beste Mr/Mevr, r\n \r\n" .
+                    "Mijn naam is " . $fName . " " . $lName . ", \r\n \r\n" .
+                    $Message . "\r\n \r\n" . 
+                    "Mijn gegevens zijn: \r\n Mail: $Mail \r\n Tel: $Tel \r\n \r\n" .
+                    "Met vriendelijke groet, \r\n $fName $lName";
+            $headers = "From: $Mail" . "\r\n" .
+                "Reply-To: $Mail" . "\r\n" .
                 "X-Mailer: PHP/" . phpversion();
+            
+            if ($request == "POST" && isset($submit)) {
+            mail($to, $subject, $message, $headers);
+            }
         } else {
             waarSchuwing();
-        }
-
-        if ($request == "POST" && isset($submit)) {
-            mail($to, $subject, $message, $headers);
         }
     }
     ?>
