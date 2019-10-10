@@ -1,25 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>TU Schoonebeek</title>
-		<meta charset="UTF-8">
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+        <!--Bevat functions.php voor de lay-out, zorgt dat alle functies van functions.php hier gebruikt kan worden-->
+        <?php require_once "functions.php" ?>
+        <!--Importeer de basis informatie-->
+        <?php imports() ?>
 	</head>
 	<body>
-		<div id="header">
-			<a id="logo" href="index.html">
-				<img src="img/Logo_Transparant.png" alt="logo TU Schoonebeek">
-			</a>
-			<h2> Schoonebeek </h2>
-		</div>
-		<div id="contentAndRssContainer">
-			<div id="navBarWhithoutRss">
-				<ul>
-					<li><a href="studiePage.html">Opleidingen</a></li>
-					<li id="usingPage"><a  href="photoPage.html">Foto's</a></li>
-					<li><a href="contactPage.html">Contact</a></li>
-				</ul>
-			</div>
+        <!--Importeren van de header-->
+        <?php headerBar() ?>
+        <div id="contentAndRssContainer">
+            <!--Importeren van de Navigatie balk (aan de functie wordt de huidige bestand naam mee gegeven-->
+            <?php navBar(basename($_SERVER['PHP_SELF'])) ?>
 			<div id="contentContainerFullWidth">
 				<div class="imgOrTextContainer">
 					<img src="img/alvernia_francis_hall_3.jpg" alt="Plaatje van TU Schoonebeek">
@@ -28,9 +20,8 @@
 					<img src="img/alvernia_francis_hall_3.jpg" alt="Plaatje van TU Schoonebeek">
 					<img src="img/alvernia_francis_hall_3.jpg" alt="Plaatje van TU Schoonebeek">
 				</div>
-				<div id="footer">
-					<p>&copy;2019-2020 Technisch universiteit Schoonebeek </p>
-				</div>
+                <!--Importeren van de Footer-->
+                <?php footer() ?>
 			</div>
 		</div>
 	</body>
