@@ -41,9 +41,10 @@
                 <?php footer() ?>
             </div>
             <?php
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $request = $_SERVER["REQUEST_METHOD"];
 
-                $request = $_SERVER["REQUEST_METHOD"];
+            if ($request == "POST") {
+
                 $fName = $_POST["firstName"];
                 $lName = $_POST["lastName"];
                 $Mail = $_POST["email"];
@@ -61,14 +62,13 @@
                 if (!empty($fName) && !empty($lName) && !empty($Mail) && !empty($Tel) && !empty($Message)) {
                     $to = "test@test.nl";
                     $subject = "Contact";
-                    $message = "Beste Mr/Mevr, r\n \r\n" .
-                        "Mijn naam is " . $fName . " " . $lName . ", \r\n \r\n" .
-                        $Message . "\r\n \r\n" .
-                        "Mijn gegevens zijn: \r\n Mail: $Mail \r\n Tel: $Tel \r\n \r\n" .
-                        "Met vriendelijke groet, \r\n $fName $lName";
-                    $headers = "From: $Mail" . "\r\n" .
-                        "Reply-To: $Mail" . "\r\n" .
-                        "X-Mailer: PHP/" . phpversion();
+                    $message =  "Beste Mr/Mevr, \n \r\n" .
+                                $Message . "\r\n \r\n" .
+                                "Mijn gegevens zijn: \r\n Mail: $Mail \r\n Tel: $Tel \r\n \r\n" .
+                                "Met vriendelijke groet, \r\n $fName $lName";
+                    $headers =  "From: $Mail" . "\r\n" .
+                                "Reply-To: $Mail" . "\r\n" .
+                                "X-Mailer: PHP/" . phpversion();
 
                     if ($request == "POST" && isset($submit)) {
                         mail($to, $subject, $message, $headers);
