@@ -5,6 +5,7 @@
         <?php require_once "functions.php" ?>
         <!--Importeer de basis informatie-->
         <?php imports() ?>
+        <link type="text/css" rel="stylesheet" href="css/contactPage.css"/>
 	</head>
 	<body>
         <!--Importeren van de header-->
