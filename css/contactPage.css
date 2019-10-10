@@ -1,0 +1,13 @@
+textarea{
+    height: 300px;
+}
+.verzendKnop{
+    margin-left: 500px;
+    width: 200px;
+}
+.email{
+    margin-top: 50px;
+}
+.tel{
+    margin-top: 50px;
+}
