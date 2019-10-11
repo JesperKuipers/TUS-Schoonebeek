@@ -1,25 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>TU Schoonebeek</title>
-		<meta charset="UTF-8">
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
+        <!--Bevat functions.php voor de lay-out, zorgt dat alle functies van functions.php hier gebruikt kan worden-->
+        <?php require_once "functions.php" ?>
+        <!--Importeer de basis informatie-->
+        <?php imports() ?>
 	</head>
 	<body>
-		<div id="header">
-			<a id="logo" href="index.html">
-				<img id="logoImg" src="img/Logo_Transparant.png" alt="logo TU Schoonebeek">
-			</a>
-			<h2> Schoonebeek </h2>
-		</div>
+        <!--Importeren van de header-->
+        <?php headerBar() ?>
 		<div id="contentAndRssContainer">
-			<div id="navBar">
-				<ul>
-					<li><a href="studiePage.html">Opleidingen</a></li>
-					<li><a href="photoPage.html">Foto's</a></li>
-					<li><a href="contactPage.html">Contact</a></li>
-				</ul>
-			</div>
+            <!--Importeren van de Navigatie balk (aan de functie wordt de huidige bestand naam mee gegeven-->
+            <?php navBar(basename($_SERVER['PHP_SELF'])) ?>
 			<div id="rssFeed">
 				
 			</div>
@@ -46,9 +38,8 @@
 						terugbetaald door met het idee van een TU te komen. Nadat hij op dit idee was gekomen heeft hij het uitgewerkt en op gang gebracht. Zo is de Technische Universiteit te Schoonebeek ontstaan.
 					</p>
 				</div>
-				<div id="footer">
-					<p>&copy;2019-2020 Technisch universiteit Schoonebeek </p>
-				</div>
+                <!--Importeren van de Footer-->
+                <?php footer() ?>
 			</div>
 		</div>
 	</body>
