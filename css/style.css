@@ -160,7 +160,6 @@ p
 	font-size:21px;
 	color:white;
 	line-height:1.4;
-	text-align:left;
 }
 
 p a
@@ -187,7 +186,7 @@ p a
 
 #footer
 {
-	margin-top:25px;
+	margin-top:55px;
 	bottom:0;
 	width:100%;
 	background-color:#020e24;
