@@ -17,10 +17,9 @@
 				<div class="imgOrTextContainer">
 					<?php photo() ?>
 				</div>
+				<!--Importeren van de Footer-->
+				<?php footer() ?>
 			</div>
-                <!--Importeren van de Footer-->
-
-                <?php footer() ?>
 		</div>
 	</body>
 </html>
