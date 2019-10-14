@@ -3,7 +3,9 @@
 	<head>
         <!--Bevat functions.php voor de lay-out, zorgt dat alle functies van functions.php hier gebruikt kan worden-->
         <?php require_once "functions.php" ?>
+
         <?php require_once "photo.functions.php" ?>
+
         <!--Importeer de basis informatie-->
         <?php imports() ?>
 	</head>
@@ -15,9 +17,19 @@
             <?php navBar(basename($_SERVER['PHP_SELF'])) ?>
 			<div id="contentContainerFullWidth">
 				<div class="imgOrTextContainer">
+
 					<?php photo() ?>
 				</div>
                <!--Importeren van de Footer-->
+
+					<img src="img/alvernia_francis_hall_3.jpg" alt="Plaatje van TU Schoonebeek">
+					<img src="img/alvernia_francis_hall_3.jpg" alt="Plaatje van TU Schoonebeek">
+					<img src="img/alvernia_francis_hall_3.jpg" alt="Plaatje van TU Schoonebeek">
+					<img src="img/alvernia_francis_hall_3.jpg" alt="Plaatje van TU Schoonebeek">
+					<img src="img/alvernia_francis_hall_3.jpg" alt="Plaatje van TU Schoonebeek">
+				</div>
+                <!--Importeren van de Footer-->
+
                 <?php footer() ?>
 			</div>
 		</div>
