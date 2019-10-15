@@ -3,6 +3,10 @@
 	<head>
         <!--Bevat functions.php voor de lay-out, zorgt dat alle functies van functions.php hier gebruikt kan worden-->
         <?php require_once "functions.php" ?>
+
+        <!--Bevat rssFeed.php voor de rss-feed, zorgt dat feed hier tevoorschijn komt-->
+        <?php require_once "rssFeed.php" ?>
+
         <!--Importeer de basis informatie-->
         <?php imports() ?>
 	</head>
@@ -12,9 +16,8 @@
 		<div id="contentAndRssContainer">
             <!--Importeren van de Navigatie balk (aan de functie wordt de huidige bestand naam mee gegeven-->
             <?php navBar(basename($_SERVER['PHP_SELF'])) ?>
-			<div id="rssFeed">
-				
-			</div>
+            <!--Importeren van de RSS-Feed-->
+            <?php rssFeed() ?>
 			<div id="contentContainer">
 				<div class="imgOrTextContainer">
 					<h1>Studeren aan technische universiteit Schoonebeek</h1> 
