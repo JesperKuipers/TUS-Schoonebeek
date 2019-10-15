@@ -15,7 +15,9 @@
             <?php navBar(basename($_SERVER['PHP_SELF'])) ?>
 			<div id="contentContainerFullWidth">
 				<div class="imgOrTextContainer">
-					<?php photo() ?>
+                                    <div id="photoPageGrid">
+                                        <?php photo() ?>
+                                    </div>
 				</div>
 				<!--Importeren van de Footer-->
 				<?php footer() ?>

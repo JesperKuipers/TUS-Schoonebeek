@@ -19,7 +19,16 @@
             arsort($imgarray);                                      //Sorteert op timestamp zodat nieuwste boven komt
 
             foreach ($imgarray as $key => $value) {
-                print("<img src=" . $path . "\\" . $key . ">");     //print de key (img file) als <img>
+                list($width, $height) = getimagesize( $path . "\\" . $key );
+                if ($height <= $width)
+                {
+                    $className = "horizantalImg";
+                }
+                else
+                {
+                    $className = "verticalImg";
+                }
+                print("<img class=".$className." src=" . $path . "\\" . $key . ">");     //print de key (img file) als <img>
             }
         }
     }

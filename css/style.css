@@ -107,12 +107,6 @@ a img
 	margin:20px;
 }
 
-.imgOrTextContainer img
-{
-	width:350px;
-	padding:40px;
-}
-
 h2
 {
 	color:white;
@@ -201,6 +195,16 @@ p a
 {
 	padding-bottom:1px;
 	border-bottom:7px solid #389aff;
+}
+
+#photoPageGrid
+{
+    display:grid;
+    grid-template-columns:400px 400px 400px;
+    grid-gap:20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left:86.44px ;
 }
 
 #studiePageGrid
@@ -305,4 +309,14 @@ textarea
 ::placeholder
 {
 	color:#398aff;
+}
+
+.horizantalImg
+{
+    width: 400px;
+}
+
+.verticalImg
+{
+    height:400px;
 }
