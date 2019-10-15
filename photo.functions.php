@@ -19,14 +19,14 @@
             arsort($imgarray);                                      //Sorteert op timestamp zodat nieuwste boven komt
 
             foreach ($imgarray as $key => $value) {
-                list($width, $height) = getimagesize( $path . "\\" . $key );
+                list($width, $height) = getimagesize( $path . "\\" . $key );        //Kijkt wat de hoogte en breedte van de foto is
                 if ($height <= $width)
                 {
-                    $className = "horizantalImg";
+                    $className = "horizantalImg";                   //Als het een brede of vierkante foto is krijgt hij de class horizantalImg
                 }
                 else
                 {
-                    $className = "verticalImg";
+                    $className = "verticalImg";                     //Anders krijgt hij de class verticalImg
                 }
                 print("<img class=".$className." src=" . $path . "\\" . $key . ">");     //print de key (img file) als <img>
             }
