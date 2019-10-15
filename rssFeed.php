@@ -9,8 +9,7 @@ function rssFeed()
 {
     ?>
     <div class="rssFeed">
-        <div class="tweakers-logo"><a href="https://tweakers.net/"><img class="tweakers-logo"
-                                                                        src="img/Tweakers_logo.png" </a></div>
+        <div class="tweakers-logo"><a href="https://tweakers.net/"><img class="tweakers-logo" src="img/Tweakers_logo.png" </a></div>
         <div id="tweakers-text">
             <?php
 
@@ -33,7 +32,7 @@ function rssFeed()
                 $description = $feed[$x]['desc'];
                 $date = date('l F d, Y', strtotime($feed[$x]['date']));
                 echo '<h2 id="RSS_H2"><a href="' . $link . '" title="' . $title . '">' . $title . '</a></h2>';
-                echo '<p>Posted on ' . $date . '</p>';
+                echo '<p><i>Posted on ' . $date . '</i></p>';
                 echo '<p>' . $description . '</p>';
             }
             ?>
