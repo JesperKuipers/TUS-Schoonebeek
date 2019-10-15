@@ -109,11 +109,11 @@
                         </div>
                         <div id="contactGridCell2">
                             <img src="img/email_Icon.png" alt="Icoon van een brief">
-                            <input type="text" name="email" class="email" placeholder="Uw emailadres">
+                            <input type="email" name="email" class="email" placeholder="Uw emailadres">
                         </div>
                         <div id="contactGridCell3">
                             <img src="img/phone2_Icon.png" alt="Icoon van een telefoon">
-                            <input type="text" name="tel" class="tel" placeholder="Uw telefoonnummer">
+                            <input type="number" name="tel" class="tel" placeholder="Uw telefoonnummer">
                         </div>
                         <div id="contactGridCell4">
                             <img src="img/message_Icon.png" alt="Icoon van een bericht">
