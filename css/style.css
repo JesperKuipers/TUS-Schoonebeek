@@ -253,5 +253,13 @@ textarea {
 }
 
 ::placeholder {
-    color: #398aff;
+	color:#398aff;
+}
+
+.horizantalImm {
+    width: 400px;
+}
+
+.verticalImg {
+    height:400px;
 }
