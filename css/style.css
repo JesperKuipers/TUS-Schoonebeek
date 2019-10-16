@@ -156,6 +156,7 @@ p a {
 
 #footer p {
     padding-top: 25px;
+    margin-bottom: 0;
 }
 
 #usingPage {
