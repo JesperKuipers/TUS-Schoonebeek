@@ -56,23 +56,17 @@
 				</div>
 				<div class="imgOrTextContainer">
 					<h1>Informatica</h1>
-				</div>
-				<div class="imgOrTextContainer">
 					<h1>Front end developer</h1>
 					<p>
 						Als front-end ontwikkelaar ben je verantwoordelijk voor de technische voorkant van een website, applicatie of programma. Jij zorgt ervoor dat het programma er niet
 						alleen goed uit ziet, maar ook echt  werkt.  Je houdt je bezig met het ontwerpen, programmeren, testen  en implementeren van het front-end gedeelte van een toepassing. 
 						Zowel op het gebied van de technische aspecten als op het gebied  van gebruiksmogelijkheid en toegankelijkheid.
 					</p>
-				</div>
-				<div class="imgOrTextContainer">
 					<h1>Cloud</h1>
 					<p>
 						Cloud computing is simpel gezegd het verhuizen van software en documenten van een computer naar het internet. Cloud computing is in de laatste jaren sterk gegroeid. 
 						Tegenwoordig zijn er dan ook steeds meer applicaties die alleen nog via het internet te bereiken zijn en niet gedownload kunnen worden.
 					</p>
-				</div>
-				<div class="imgOrTextContainer">
 					<h1>Technical IT</h1>
 					<p>
 						Als technisch informaticus ben je de uitvinder van moderne technische IT-systemen. 
@@ -80,8 +74,6 @@
 						duurzame en veilige oplossingen te maken voor de steeds complexere uitdagingen van de toekomst. 
 						In het dagelijks leven zijn we steeds afhankelijker geworden van geautomatiseerde systemen.  
 					</p>
-				</div>
-				<div class="imgOrTextContainer">
 					<h1>Software development</h1>
 					<p>
 						Software ontwikkelen voor eindgebruikers in een professionele programmeertaal, het integreren van de cloud binnen de IT-werkzaamheden van je organisatie. 
@@ -91,23 +83,17 @@
 				</div>
 				<div class="imgOrTextContainer">
 					<h1>Werktuigbouwkunde</h1>
-				</div>
-				<div class="imgOrTextContainer">
 					<h1>High Tech System</h1>
 					<p>
 						Binnen de opleiding High Tech Systems werk je met multidisciplinaire teams samen met bedrijven aan praktijkgericht onderzoek. 
 						In fysieke laboratoria met ultra moderne apparatuur. 
 						Aan deze opleiding zitten daarom redelijk hoge kosten. 
 					</p>
-				</div>
-				<div class="imgOrTextContainer">
 					<h1>Composite design</h1>
 					<p>
 						Als student van de composite design opleiding ga je bezig met technische elementen van hoge kwaliteit. 
 						De kerncompetentie van een samengesteld ontwerp ligt vooral in de hechting van verschillende high-tech materialen. 
 					</p>
-				</div>
-				<div class="imgOrTextContainer">
 					<h1>Sustainable polymers</h1>
 					<p>
 						Biologisch afbreekbare verpakkingen en frisdrankflessen gemaakt uit planten is realiteit geworden. 
