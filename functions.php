@@ -10,12 +10,10 @@ function imports() {
 
 function headerBar() {
     ?>
-    <div id="header">
-        <a id="logo" href="index.php">
+    <a id="logo" href="index.php"><div id="header">
             <img id="logoImg" src="img/Logo_Transparant.png" alt="logo TU Schoonebeek">
-        </a>
         <h2>Schoonebeek</h2>
-    </div>
+        </div></a>
     <?php
 }
 
