@@ -59,6 +59,11 @@
                     // Stukje javascript waarbij er een waarschuwing gegeven wordt aan de gebruiker in een alert box
                     echo '<script type="text/javascript">alert("U vergeet wat in te vullen");</script>';
                 }
+                function mailMislukt()
+                {
+                    // Stukje javascript waarbij er een error gegeven wordt aan de gebruiker in een alert box
+                    echo '<script type="text/javascript">alert("Het is niet gelukt om de mail te versturen");</script>';
+                }
 
                 // Controle of alle inputvelden zijn ingevuld
                 if (!empty($fName) && !empty($lName) && !empty($Mail) && !empty($Tel) && !empty($Message)) {
@@ -75,7 +80,11 @@
                                 "X-Mailer: PHP/" . phpversion();
                     // Als de verzend knop is ingedrukt wordt wordt de mail functie geactiveerd
                     if ($request == "POST" && isset($submit)) {
-                        mail($to, $subject, $message, $headers);
+                        if(strpos($Mail, "@") == true && strlen(strval($Tel)) == 10 && is_numeric($Tel)){
+                            @mail($to, $subject, $message, $headers);
+                        } else {
+                            mailMislukt();
+                        }
                     }
                 } else {
                     // Geeft een alert box weer met een waarschuwing
