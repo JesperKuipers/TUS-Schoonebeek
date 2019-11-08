@@ -152,6 +152,13 @@ p a {
     margin-top: 25px;
 }
 
+.imgOrTextContainer2 {
+    background-color: rgba(2, 14, 36, 0.7);
+    margin-left: 5%;
+    margin-right: 4%;
+    margin-top: 25px;
+}
+
 #footer {
     margin-top: 25px;
     bottom: 0;
@@ -167,36 +174,6 @@ p a {
 #usingPage {
     padding-bottom: 1px;
     border-bottom: 7px solid #389aff;
-}
-
-#studiePageGrid {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    margin-bottom: 50px;
-    margin-left: 2%;
-    margin-right: 1.5%;
-}
-
-#gridCell1 {
-    border-right: 3px solid #389aff;
-    border-bottom: 3px solid #389aff;
-    text-align: center;
-}
-
-#gridCell2 {
-    border-left: 3px solid #389aff;
-    border-bottom: 3px solid #389aff;
-    text-align: center;
-}
-
-#gridCell3 {
-    border-right: 3px solid #389aff;
-    border-top: 3px solid #389aff;
-}
-
-#gridCell4 {
-    border-left: 3px solid #389aff;
-    border-top: 3px solid #389aff;
 }
 
 #contactGrid {
@@ -256,10 +233,22 @@ textarea {
 	color:#398aff;
 }
 
-.horizantalImm {
+.horizantalImg {
     width: 400px;
+    margin: auto 0;
 }
 
 .verticalImg {
     height:400px;
+    margin:0 auto;
+}
+
+#photoPageGrid
+{
+    display:grid;
+    grid-template-columns:400px 400px 400px;
+    grid-gap:20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left:86.44px ;
 }
