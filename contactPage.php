@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -126,44 +125,6 @@
                 <!--Importeren van de Footer-->
                 <?php footer() ?>
             </div>
-            <?php
-            $request = $_SERVER["REQUEST_METHOD"];
-
-            if ($request == "POST") {
-
-                $fName = $_POST["firstName"];
-                $lName = $_POST["lastName"];
-                $Mail = $_POST["email"];
-                $Tel = $_POST["tel"];
-                $Message = $_POST["message"];
-                $submit = $_POST["submit"];
-
-                function waarSchuwing()
-                {
-
-                    echo '<script type="text/javascript">alert("U vergeet wat in te vullen");</script>';
-
-                }
-
-                if (!empty($fName) && !empty($lName) && !empty($Mail) && !empty($Tel) && !empty($Message)) {
-                    $to = "test@test.nl";
-                    $subject = "Contact";
-                    $message =  "Beste Mr/Mevr, \n \r\n" .
-                                $Message . "\r\n \r\n" .
-                                "Mijn gegevens zijn: \r\n Mail: $Mail \r\n Tel: $Tel \r\n \r\n" .
-                                "Met vriendelijke groet, \r\n $fName $lName";
-                    $headers =  "From: $Mail" . "\r\n" .
-                                "Reply-To: $Mail" . "\r\n" .
-                                "X-Mailer: PHP/" . phpversion();
-
-                    if ($request == "POST" && isset($submit)) {
-                        mail($to, $subject, $message, $headers);
-                    }
-                } else {
-                    waarSchuwing();
-                }
-            }
-            ?>
         </div>
     </body>
 </html>
